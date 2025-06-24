@@ -1,0 +1,34 @@
+{
+    "channel": "Conseeker CZ",
+    "cons": [
+        {
+            "name": "Festival Fantazie 2025",
+            "start": "2025-06-27",
+            "end": "2025-07-06",
+            "description": "Sci-fi a technologie, fantasy a horor, mýty a historie v hrách, filmech, seriálech, anime, comicsu, knihách, kostýmech",
+            "web": "https://www.festivalfantazie.cz/",
+            "program": [
+                {
+                    "line": "BritCon (britské seriály a kultura)",
+                    "name": "Ludwig - 1x01",
+                    "section": "Nové britské seriály", 
+                    "start": "2025-06-30 09:00",
+                    "description": "Úspěšný detektiv James Taylor zmizí. Jeho bratr-dvojče, návrhář hlavolamů John, přezdívaný Ludwig, se za něj začne vydávat, aby vyšetřil jeho zmizení."
+                },
+                {
+                    "line": "BritCon (britské seriály a kultura)", 
+                    "name": "Dept. Q - 1x01",
+                    "section": "Nové britské seriály",
+                    "start": "2025-07-01 09:00",
+                    "description": "Carl je bývalý špičkový detektiv, který se trápí pocitem viny po útoku, při němž ochrnul jeho partner a zemřel další policista. Po návratu do práce je Carl pověřen odloženým případem, který pohltí jeho život."
+                },
+                {
+                    "name": "My Lady Jane - 1x01",
+                    "section": "Nové britské seriály",
+                    "start": "2025-06-28 10:00",
+                    "description": "Lady Jane Grey se děsí domluveného sňatku, jen aby nakonec byla překvapená, když se z něj vyklube vášnivý románek. Jane se dočká korunovace na královnu a čeká ji hrdinská mise ve snaze zachránit svůj lid, který trpí pod rukama hrdinčiných politických rivalů."
+                }
+            ]
+        }
+    ]
+}

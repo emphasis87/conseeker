@@ -1,0 +1,27 @@
+﻿@page "/"
+@using ConSeeker.Shared.Services
+@inject IFormFactor FormFactor
+
+<PageTitle>Home</PageTitle>
+
+@* <h1>Hello, world!</h1>
+
+Welcome to your new app running on <em>@factor</em> using <em>@platform</em>. *@
+
+<div class="flex-container">
+    <div class="panel">
+        <h3>Cons</h3>
+        <p>Con 1</p>
+        <p>Con 2</p>
+    </div>
+    <div class="panel">
+        <h3>Channels</h3>
+        <p>Channel 1</p>
+        <p>Channel 2</p>
+    </div>
+</div>
+
+@code {
+    private string factor => FormFactor.GetFormFactor();
+    private string platform => FormFactor.GetPlatform();
+}
