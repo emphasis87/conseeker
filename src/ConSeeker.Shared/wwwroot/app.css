@@ -17,7 +17,8 @@ a, .btn-link {
 }
 
 .content {
-    padding-top: 1.1rem;
+    /*padding-top: 1rem;*/
+    padding: 0.5rem;
 }
 
 h1:focus {
@@ -53,8 +54,8 @@ h1:focus {
 .flex-container {
     display: flex;
     flex-wrap: wrap; /* Key property: allows items to wrap to the next line */
-    gap: 20px; /* Space between items */
-    padding: 15px;
+    gap: 0.5em; /* Space between items */
+    padding: 0;
     justify-content: center; /* Centers items when they wrap */
 }
 
@@ -67,7 +68,7 @@ h1:focus {
 
     background-color: #e3f2fd;
     border: 1px solid #90caf9;
-    padding: 20px;
+    padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     min-width: 0; /* Important: Prevents overflow issues with flex items */
