@@ -1,6 +1,33 @@
-﻿<Router AppAssembly="typeof(Layout.MainLayout).Assembly">
-    <Found Context="routeData">
-        <RouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)" />
-        <FocusOnNavigate RouteData="routeData" Selector="h1" />
-    </Found>
-</Router>
+@using ConSeeker.Shared.Components
+@using ConSeeker.Shared.Services
+
+@inject IFatalErrorService FatalErrorService
+
+@if (fatalMessage is null)
+{
+    <Router AppAssembly="typeof(Layout.MainLayout).Assembly">
+        <Found Context="routeData">
+            <RouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)" />
+            <FocusOnNavigate RouteData="routeData" Selector="h1" />
+        </Found>
+    </Router>
+}
+else 
+{
+    <FatalError Message="@fatalMessage" />
+}
+
+@code {
+    private string? fatalMessage;
+
+    protected override void OnInitialized()
+    {
+        FatalErrorService.OnFatalError += ShowFatalError;
+    }
+
+    private void ShowFatalError(string message)
+    {
+        fatalMessage = message;
+        StateHasChanged(); // triggers re-render
+    }
+}

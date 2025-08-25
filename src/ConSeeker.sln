@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConSeeker.Web", "ConSeeker.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConSeeker.Web.Client", "ConSeeker.Web.Client\ConSeeker.Web.Client.csproj", "{CDC430C5-7225-97A5-C3EB-4C649E0B0B74}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConSeeker.Api", "ConSeeker.Api\ConSeeker.Api.csproj", "{37C920A8-0B27-4870-B38E-4B3304F51AC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConSeeker.Api.Data", "ConSeeker.Api.Data\ConSeeker.Api.Data.csproj", "{ABAF5A75-C527-4E49-9F35-8BAEB81CA6D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +38,14 @@ Global
 		{CDC430C5-7225-97A5-C3EB-4C649E0B0B74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDC430C5-7225-97A5-C3EB-4C649E0B0B74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDC430C5-7225-97A5-C3EB-4C649E0B0B74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37C920A8-0B27-4870-B38E-4B3304F51AC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37C920A8-0B27-4870-B38E-4B3304F51AC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37C920A8-0B27-4870-B38E-4B3304F51AC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37C920A8-0B27-4870-B38E-4B3304F51AC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABAF5A75-C527-4E49-9F35-8BAEB81CA6D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABAF5A75-C527-4E49-9F35-8BAEB81CA6D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABAF5A75-C527-4E49-9F35-8BAEB81CA6D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABAF5A75-C527-4E49-9F35-8BAEB81CA6D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

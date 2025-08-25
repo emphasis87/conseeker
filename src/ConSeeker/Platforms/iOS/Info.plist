@@ -28,5 +28,13 @@
     </array>
     <key>XSAppIconAssets</key>
     <string>Assets.xcassets/appicon.appiconset</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>App needs your location to show nearby conventions</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>App needs your location for background tracking</string>
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>location</string>
+    </array>
 </dict>
 </plist>

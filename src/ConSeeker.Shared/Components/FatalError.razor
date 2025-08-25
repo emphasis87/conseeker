@@ -1,0 +1,18 @@
+@using ConSeeker.Shared.Services
+
+@inject IExitService ExitService
+
+@code {
+    [Parameter] public string Message { get; set; } = "The app cannot continue.";
+
+    private void OnExitClicked(MouseEventArgs args)
+    {
+        ExitService.Exit();
+    }
+}
+
+<div class="fatal-error-overlay">
+    <h1>Fatal Error</h1>
+    <p>@Message</p>
+    <button class="fatal-exit-btn" @onclick="OnExitClicked">Exit</button>
+</div>

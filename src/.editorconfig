@@ -1,0 +1,18 @@
+# Apply to all files
+[*]
+charset = utf-8
+end_of_line = crlf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Indentation (spaces)
+indent_style = space
+indent_size = 4
+
+# C# conventions
+dotnet_style_prefer_tab_for_indent = false
+
+# XAML files
+[*.xaml]
+indent_style = space
+indent_size = 4

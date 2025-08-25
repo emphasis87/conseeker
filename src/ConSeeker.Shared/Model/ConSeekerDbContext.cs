@@ -1,4 +1,4 @@
-﻿using ConSeeker.Shared.Model.Sources;
+using ConSeeker.Shared.Model.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -18,6 +18,9 @@ namespace ConSeeker.Shared.Model
         {
         }
 
-        public DbSet<Channel> Channels { get; set; }
+        public DbSet<Provider> Providers { get; set; }
+        public DbSet<Provider> Conventions { get; set; }
+        public DbSet<Provider> Activities { get; set; }
+        public DbSet<Provider> Hosts { get; set; }
     }
 }
