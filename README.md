@@ -40,6 +40,7 @@ adb devices # Check connected
 
 ### Debugging
 
+- install scrcpy (Android screen share), run it from console
 - check ConSeeker.Api/Properties/launchSettings.json and configure listening port
 - start the **ConSeeker.Api** project (note the IP address in the log output)
 - change ConSeeker "ApiClient" http client base address to point to the api

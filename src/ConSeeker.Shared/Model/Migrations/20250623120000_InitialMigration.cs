@@ -7,22 +7,23 @@ namespace ConSeeker.Shared.Model.Migrations
     {
         public override void Down()
         {
-            Delete.ForeignKey("FK_PROVIDERS_CONVENTIONS");
+            //Delete.ForeignKey("FK_PROVIDERS_CONVENTIONS");
 
-            Delete.Table("PROVIDERS");
-            Delete.Table("CONVENTIONS");
-            Delete.Table("PROFILES");
+            Delete.Table("PROVIDER");
+            //Delete.Table("CONVENTIONS");
+            //Delete.Table("PROFILES");
         }
 
         public override void Up()
         {
-            Create.Table("PROVIDERS")
+            Create.Table("PROVIDER")
                 .WithColumn("ID").AsInt64().PrimaryKey().Identity()
-                .WithColumn("SOURCE_URL").AsString().NotNullable()
-                .WithColumn("LAST_CHECKED").AsDateTime()
-                .WithColumn("LAST_CHANGED").AsDateTime()
-                .WithColumn("CONTENT").AsString();
-
+                .WithColumn("SOURCEURL").AsString().Nullable()
+                .WithColumn("NAME").AsString().Nullable()
+                .WithColumn("LASTCHECKED").AsDateTime().Nullable()
+                .WithColumn("LASTCHANGED").AsDateTime().Nullable()
+                .WithColumn("CONTENT").AsString().Nullable();
+            /*
             Create.Table("CONVENTIONS")
                 .WithColumn("ID").AsInt64().PrimaryKey().Identity()
                 .WithColumn("PROVIDER_ID").AsInt64().NotNullable()
@@ -40,6 +41,7 @@ namespace ConSeeker.Shared.Model.Migrations
                 .WithColumn("NAME").AsString().NotNullable()
                 .WithColumn("ALIASES").AsString()
                 .WithColumn("BIO").AsString();
+            */
         }
     }
 }

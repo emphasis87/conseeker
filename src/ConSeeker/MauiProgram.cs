@@ -1,5 +1,6 @@
 using ConSeeker.Services;
 using ConSeeker.Shared.Model;
+using ConSeeker.Shared.Model.Services;
 using ConSeeker.Shared.Services;
 using FluentMigrator.Runner;
 using Microsoft.Data.Sqlite;
@@ -51,6 +52,7 @@ namespace ConSeeker
             builder.Services.AddSingleton<IGeolocationService, GeolocationService>();
             builder.Services.AddSingleton<IContactService, ContactService>();
             builder.Services.AddSingleton<IGestureService, GestureService>();
+            builder.Services.AddTransient<IProviderManager, ProviderManager>();
 #if ANDROID
             builder.Services.AddSingleton<IHapticService, AndroidHapticService>();
 #else
@@ -107,6 +109,21 @@ namespace ConSeeker
                 gestures.StartGestureDetection();
             });
 
+#if DEBUG
+            try
+            {
+                using var scope = app.Services.CreateScope();
+                var context = app.Services.GetRequiredService<ConSeekerDbContext>();
+                context.Providers.AddRange(
+                    new Shared.Model.Entities.Provider { Name = "ConSeeker", SourceUrl = "https://github.com/emphasis87/conseeker/blob/master/data/conseeker-cz.json" });
+                context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+            }
+#endif
+
             return app;
         }
 
@@ -146,6 +163,12 @@ namespace ConSeeker
 
 #if WINDOWS
             var dbpath = Path.Combine(appdata, "ConSeeker", dbname);
+            var location = Path.GetDirectoryName(dbpath);
+            if (!string.IsNullOrWhiteSpace(location) && !Directory.Exists(location))
+            {
+                Directory.CreateDirectory(location);
+            }
+            
 #else
             var dbpath = Path.Combine(FileSystem.AppDataDirectory, dbname);
 #endif

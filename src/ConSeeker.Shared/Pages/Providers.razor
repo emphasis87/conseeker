@@ -1,9 +1,24 @@
 @page "/providers"
+@using ConSeeker.Shared.Model.Entities
+@using ConSeeker.Shared.Model.Services
+@inject IProviderManager ProviderManager
 
 <PageTitle>Providers</PageTitle>
 
 <h2>Providers</h2>
 
+@foreach(var provider in ProviderList ?? Array.Empty<Provider>())
+{
+    <div>@provider.SourceUrl</div>
+    <div>@provider.Name</div>
+}
+
 @code {
-    
+
+    IEnumerable<Provider>? ProviderList { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        ProviderList = await ProviderManager.GetProvidersAsync();
+    }
 }

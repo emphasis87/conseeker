@@ -12,9 +12,9 @@ namespace ConSeeker.Shared.Model.Entities
 
         public string SourceUrl { get; set; } = default!;
         public string? Name { get; set; }
-        public DateTime LastChecked { get; set; }
-        public DateTime LastChanged { get; set; }
-        public string? Content { get; set; }
+        //public DateTime LastChecked { get; set; }
+        //public DateTime LastChanged { get; set; }
+        //public string? Content { get; set; }
 
         public List<Convention> Conventions { get; set; } = [];
     }
