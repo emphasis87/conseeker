@@ -25,7 +25,7 @@ An application for searching and managing conventions.
 
 ### Wireless debugging
 
-Windows + Android:
+**Windows + Android:**
 
 - Visual Studio 2022
 - Android Studio
@@ -36,3 +36,11 @@ Windows + Android:
 adb <device-ip>:<pairing-port1> # Wireless debugging → Pair device with pairing code
 adb connect <device-ip>:<pairing-port2> # Wireless debugging (IP address and port)
 adb devices # Check connected
+```
+
+### Debugging
+
+- check ConSeeker.Api/Properties/launchSettings.json and configure listening port
+- start the **ConSeeker.Api** project (note the IP address in the log output)
+- change ConSeeker "ApiClient" http client base address to point to the api
+- start the **ConSeeker** project

@@ -78,7 +78,10 @@ namespace ConSeeker
             // API CLIENT
             builder.Services.AddHttpClient("ApiClient", client =>
             {
-                client.BaseAddress = new Uri("https://localhost:7205");
+#if DEBUG
+                client.Timeout = TimeSpan.FromSeconds(5);
+                client.BaseAddress = new Uri("http://192.168.0.129:5000");
+#endif
             });
 
             var app = builder.Build();
